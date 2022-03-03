@@ -14,6 +14,7 @@ app.use(express.json());
 //routes
 app.use('/studentRegistration', require('./src/routes/studentRegistration'));
 app.use('/martialProgramRegister', require('./src/routes/martialProgramRegister'));
+app.use('/martialGraduation', require('./src/routes/martialGraduation'));
 
 
 app.listen(3000, () => {

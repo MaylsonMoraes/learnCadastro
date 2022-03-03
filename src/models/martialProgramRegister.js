@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { required } = require('nodemon/lib/config');
 const Schema = mongoose.Schema;
 
 module.exports = mongoose.model('MartialProgramRegister', new Schema
@@ -6,13 +7,16 @@ module.exports = mongoose.model('MartialProgramRegister', new Schema
         {
 
             name: {
-                type: String
+                type: String,
+                required: true
             },
             martialArtorStyle: {
-                type: String
+                type: String,
+                required: true
             },
             programType: {
-                type: String
+                type: String,
+                required: true
             }
 
             },

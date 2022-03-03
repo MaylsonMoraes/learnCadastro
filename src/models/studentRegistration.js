@@ -4,7 +4,16 @@ const Schema = mongoose.Schema;
 module.exports = mongoose.model('StudentRegistration', new Schema
     (
         {
-
+            martialGraduation: {
+                type: mongoose.Types.ObjectId,
+                ref: 'MartialGraduation',
+                required: true
+            },
+            martialProgramRegister: {
+                type: mongoose.Types.ObjectId,
+                ref: 'MartialProgramRegister',
+                required: true
+            },
             fullName: {
                 type: String,
                 required: true
@@ -53,9 +62,6 @@ module.exports = mongoose.model('StudentRegistration', new Schema
             nameofParentorGuardian: {
                 type: String
             },
-            MedicalHistory: {
-                type: String
-            },
             whatAllergies: {
                 type: String
             },
@@ -65,7 +71,7 @@ module.exports = mongoose.model('StudentRegistration', new Schema
             medicalHistory: {
                 type: String
             },
-            históricoDeCirurgias: {
+            historicoDeCirurgias: {
                 type: String
             },
             medicalContact: {
